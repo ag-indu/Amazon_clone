@@ -1,0 +1,112 @@
+.products{
+    padding-top: 60px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(200px, 1fr));
+}
+
+.item-title{
+    height: 40px;
+}
+
+.item-description{
+   display: flex;
+   flex-direction: column;
+   padding: 25px 20px 25px 20px;
+   border-right: 1px solid rgb(231, 231, 231);
+   border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.item-image-container{
+    display: flex;
+    height: 180px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-image{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.rating{
+    padding-top: 10px;
+    display: flex;
+    width: 70px;
+    align-items: end;
+    color:#017cb6; 
+}
+
+.rating-image{
+    width: 100px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.price{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.dropdown{
+    margin-top: 10px;
+    height: 30px;
+    width: 45px;
+    padding-left: 5px;
+    border-radius: 8px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(213, 217, 217);
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.cart-button{
+    margin-top: 40px;
+    text-align: center;
+    height: 35px;
+    border-radius: 20px;
+    background-color: rgb(255, 216, 20);
+    border: 1px solid rgb(252, 210, 0);
+    cursor: pointer;
+}
+
+.cart-button:hover{
+    background-color: rgb(228, 194, 21);
+}
+
+@media (min-width: 1301px) and (max-width: 1600px) {
+    /* CSS for this specific range */
+    .products{
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+    /* CSS for this specific range */
+    .products{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    /* CSS for this specific range */
+    .products{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 800px) {
+    /* CSS for this specific range */
+    .products{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    /* CSS for this specific range */
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

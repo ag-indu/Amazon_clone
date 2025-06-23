@@ -7,11 +7,12 @@
     left: 0px;
     color: white;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .amazon-logo-container{
    padding: 20px;
-   width: 130px;
+   width: 450px;
 }
 
 .amazon-logo{
@@ -57,14 +58,15 @@
 .right-section{
     display: flex;
     margin-left: 20px;
-    width: 165px;
-    align-items:self-end
+    width: 565px;
+    align-items:center
 
 }
 .hamburger-menu{
     display: none;
 }
 .return{
+    margin-left: 400px;
     width: 58px;
     font-size: 14px;
 }
@@ -78,6 +80,7 @@
     width: 10px;
     font-weight: bold;
     position: relative;
+    align-items: flex-end;
 }
 .cart-icon{
     height: 30px;
@@ -87,11 +90,76 @@
 .cart-item-number{
     position: absolute;
     left: 20px;
-    top: -15px;
+    top: 0px;
     color: rgb(240, 136, 4);
 }
 
-@media (max-width:574px) {
+@media (min-width: 1301px) and (max-width: 1600px) {
+    .amazon-logo-container{
+        width: 300px;
+    }
+
+    .return{
+        margin-left: 150px
+    }
+
+    .right-section{
+        margin-left: 20px;
+        width: 320px;
+       
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+    .amazon-logo-container{
+        width: 150px;
+    }
+
+    .return{
+        margin-left: 10px
+    }
+
+    .right-section{
+        margin-left: 20px;
+        width: 170px;
+       
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    .amazon-logo-container{
+        width: 130px;
+    }
+
+    .return{
+        margin-left: 10px
+    }
+
+    .right-section{
+        margin-left: 20px;
+        width: 180px;
+       
+    }
+}
+
+@media (min-width: 576px) and (max-width: 800px) {
+    /* CSS for this specific range */
+    .amazon-logo-container{
+        width: 70px;
+    }
+
+    .return{
+        margin-left: 10px
+    }
+
+    .right-section{
+        margin-left: 20px;
+        width: 170px;
+       
+    }
+}
+
+@media (max-width:575px) {
     .navbar {
         display: flex;
         align-items: center;  /* THIS is key to vertically centering everything */
@@ -134,3 +202,4 @@
         width: 20px;
     }
 }
+

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="styles/orders.css">
+    <link rel="stylesheet" href="styles/tracking.css">
 </head>
 <body>
     <header>
@@ -24,12 +26,16 @@
             </div>
             <div class="right-section">
                 <img src="images/navbar/hamburger-menu.png" alt="hamburger-menu" class="hamburger-menu">
-                <p class="return">Returns <span class="orders">& Orders</span></p>
-                <div class="cart-container">
-                    <img src="images/navbar/cart-icon.png" alt="cart-icon" class="cart-icon">
-                    <p class="cart-item-number">3</p>
-                    <p>Cart</p>
-                </div>
+                <a href="order.html">
+                    <p class="return">Returns <span class="orders">& Orders</span></p>
+                </a>
+                <a href="checkout.html">
+                    <div class="cart-container">
+                        <img src="images/navbar/cart-icon.png" alt="cart-icon" class="cart-icon">
+                        <p class="cart-item-number"></p>
+                        <p>Cart</p>
+                    </div>
+                </a>
             </div>
         </nav>
     </header>
@@ -39,5 +45,6 @@
     </main>
     <script src="Data/product.js"></script>
     <script src="scripts/amazon.js"></script>
+    <script src="scripts/cart.js"></script>
 </body>
 </html>

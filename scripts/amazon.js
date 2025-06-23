@@ -1,4 +1,7 @@
 let videoGrid = ''
+let cartCount = 0;
+let cartCountText = document.querySelector('.cart-item-number');
+cartCountText.innerHTML = cartCount;
 products.forEach((product)=>{
     const html = `<article class="item-description">
     <div class="item-image-container">
@@ -31,3 +34,10 @@ products.forEach((product)=>{
 
 document.querySelector('.products').innerHTML = videoGrid
 
+document.querySelectorAll('.cart-button').forEach((button)=>{
+    button.addEventListener('click',()=>{
+        cartCount++;
+        cartCountText.innerHTML = cartCount;
+    });
+
+})

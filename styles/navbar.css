@@ -18,6 +18,9 @@
     width: 100px;
 }
 
+.amazon-logo-small{
+    display: none;
+}
 .search{
    flex: 1;
    display: flex;
@@ -58,7 +61,9 @@
     align-items:self-end
 
 }
-
+.hamburger-menu{
+    display: none;
+}
 .return{
     width: 58px;
     font-size: 14px;
@@ -84,4 +89,48 @@
     left: 20px;
     top: -15px;
     color: rgb(240, 136, 4);
+}
+
+@media (max-width:574px) {
+    .navbar {
+        display: flex;
+        align-items: center;  /* THIS is key to vertically centering everything */
+        justify-content: space-between; /* This will space logo, search, and right section */
+        padding: 0 10px; /* Add padding so stuff isn't glued to the edge */
+        height: 60px;
+        background-color: rgb(19, 25, 33);
+        color: white;
+        position: fixed;
+        right: 0;
+        left: 0;
+    }
+    
+    .amazon-logo-container{
+        width: 10px; /* Let it fit the small logo naturally */
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    .amazon-logo{
+        display:none;
+    
+    }
+
+    .amazon-logo-small{
+        display: block;
+        width: 35px;
+    }
+
+    .return,.cart-container{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .right-section{
+        width: 20px;
+    }
 }

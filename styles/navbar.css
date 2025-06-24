@@ -9,6 +9,15 @@
     justify-content: space-between;
     z-index: 1;
     top: 0px;
+    
+}
+.navbar a,
+.navbar a:hover,
+.navbar a:visited,
+.navbar a:active {
+    color: inherit; /* The link will use the color of its parent element */
+    text-decoration: none; /* Removes underline */
+    cursor: pointer; /* Makes it clear it's clickable */
 }
 
 .amazon-logo-container{

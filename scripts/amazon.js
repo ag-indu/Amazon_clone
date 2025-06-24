@@ -1,8 +1,17 @@
 let videoGrid = '';
 let cartCountText = document.querySelector('.cart-item-number');
 cartCountText.innerHTML = 0;
-import {cart} from '../Data/cart.js'
+import {cart,addToCart} from '../Data/cart.js'
 import { products } from '../Data/product.js';
+
+function updateCartQuantity(){
+    let cartCount = 0;
+    console.log(cart);
+    cart.forEach((item)=>{
+        cartCount += item.quantity;
+    })
+    cartCountText.innerHTML = cartCount;
+}
 
 products.forEach((product)=>{
     const html = `<article class="item-description">
@@ -40,28 +49,9 @@ document.querySelectorAll('.cart-button').forEach((button)=>{
     button.addEventListener('click',()=>{
         
         const productId = button.dataset.productId;
-        let matchingitem;
-        cart.forEach((item)=>{
-            if(productId===item.productId){
-                matchingitem = item;
-            }
-        })
-
-        if(!matchingitem){
-                cart.push({
-                productId,
-                quantity:1
-            });
-        }
-        else{
-            matchingitem.quantity++;
-        }
-        let cartCount = 0;
-        console.log(cart);
-        cart.forEach((item)=>{
-            cartCount += item.quantity;
-        })
-        cartCountText.innerHTML = cartCount;
+        addToCart(productId);
+        updateCartQuantity();
+       
     });
 
 })

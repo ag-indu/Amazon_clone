@@ -1,9 +1,4 @@
-export let cart = [
-    {
-        productId:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-        quantity:1
-    }
-]
+export let cart = JSON.parse(localStorage.getItem('cart'))||[];
 export function addToCart(productId){
     let matchingitem;
     cart.forEach((cartItem)=>{
@@ -21,18 +16,19 @@ export function addToCart(productId){
     else{
         matchingitem.quantity++;
     }
+
+    saveToStorage();
 }
 
-
-let html = ''
-// let orderSummary = document.querySelector('.order-summary');
-// cart.forEach((item)=>{
-//     products.forEach((product)=>{
-//         if(product.name===item.productName){
-//             
-//         }
-//     })
-
-// })
-
-// orderSummary.innerHTML = html
+export function removeFromCart(productId){
+    cart.forEach((cartItem,index)=>{
+        if(productId ===cartItem.productId){
+          cart.splice(index,1);
+          console.log(cart);
+        }
+      })
+      saveToStorage();
+}
+export function saveToStorage(){
+    localStorage.setItem('cart',JSON.stringify(cart));
+}

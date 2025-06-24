@@ -1,4 +1,4 @@
-import { cart } from "../Data/cart.js";
+import { cart,removeFromCart } from "../Data/cart.js";
 import { products } from "../Data/product.js";
 
 function renderCartItem(){
@@ -88,20 +88,16 @@ cart.forEach((cartItem)=>{
 })
 console.log
 document.querySelector('.order-summary').innerHTML = html;
-}
-
-renderCartItem();
-
 document.querySelectorAll('.delete-link').forEach((link)=>{
   link.addEventListener('click',()=>{
     const productId = link.dataset.productId;
     console.log(productId);
-   cart.forEach((cartItem,index)=>{
-      if(productId ===cartItem.productId){
-        cart.splice(index,1);
-        console.log(cart);
-      }
-    })
+    removeFromCart(productId);
     renderCartItem();
   })
 })
+}
+
+renderCartItem();
+
+

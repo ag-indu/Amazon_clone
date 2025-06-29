@@ -21,7 +21,7 @@ products.forEach((product)=>{
     <div>
         <p class="item-title">${product.name}</p>
         <div class="rating">
-            <img src="images/star-ratings/rating-${product.rating.stars*10}.png" alt="star-rating" class="rating-image">
+            <img src="${product.getStarsUrl()}" alt="star-rating" class="rating-image">
             <p>${product.rating.count}</p>
         </div>
         <p class="price">₹${product.price}</p>

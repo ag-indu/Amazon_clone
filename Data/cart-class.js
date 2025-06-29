@@ -1,3 +1,5 @@
+//Class: A better way to generate objects in oop.
+
 class Cart {
     cartItems = [
         {
@@ -6,12 +8,13 @@ class Cart {
             deliveryOptionId: '1'
         }
     ];
-    localStorageKey;
+    //private property
+    #localStorageKey;
 
     //1.has to be named constructor
     //2.Should not return anything 
     constructor(localStorageKey){
-        this.localStorageKey = localStorageKey;
+        this.#localStorageKey = localStorageKey;
     }
     addToCart(productId){
         let matchingitem;
@@ -45,7 +48,7 @@ class Cart {
     };
 
     saveToStorage(){
-        localStorage.setItem(this.localStorageKey,JSON.stringify(this.cartItems));
+        localStorage.setItem(this.#localStorageKey,JSON.stringify(this.cartItems));
     };
 
     updateDeliveryOption(productId,deliveryOptionId){
